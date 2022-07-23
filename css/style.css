@@ -90,6 +90,6 @@ ol{
     left: 5px;
 }
 
-.input:checked + .slider {
+input:checked + .slider {
     transform: translateX(20px);
 }
