@@ -8,9 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
-<body>
+<body onload="main()">
     <div class="container">
+        <div class="switch">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="slider"></div>
+            </label>
+            <small>Cambiar color</small>
+        </div>
         <h1 class="tittle">Frutas</h1>
         <ol class="fruits">
             <li class="fruit-item">Naranja.</li>

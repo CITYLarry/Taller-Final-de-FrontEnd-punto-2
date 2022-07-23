@@ -1,0 +1,95 @@
+* {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+:root,  [data-theme="theme1"]{
+    --bg-color: rgba(0, 204, 0, 0.1);
+    --main-color: rgb(153, 51, 204);
+    --secondary-color: rgb(0, 204, 0);
+    --container-bg-color: rgb(200 , 200, 200);
+    --fruit-class-main-bg-color: rgba(153, 51, 204, 0.2);
+    --fruit-class-sec-bg-color: rgba(0, 204, 0, 0.2);
+
+}
+
+[data-theme="theme2"]{
+    --bg-color: rgba(153, 51, 204, 0.1);
+    --main-color: rgba(0, 204, 0);
+    --secondary-color: rgb(153, 51, 204);
+    --container-bg-color: rgb(220 , 220, 220);
+    --fruit-class-main-bg-color: rgba(0, 204, 0, 0.2);
+    --fruit-class-sec-bg-color: rgba(153, 51, 204, 0.2);
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 30%;
+    background-color: var(--container-bg-color);
+    border-radius: 0.2em;
+    padding: 0.2em 2em;
+    box-shadow: 0 0 10px var(--main-color);
+    position: absolute
+}
+
+h1 {
+    color: var(--main-color);
+    text-align: center;
+}
+
+ol{
+    padding-left: 5px;
+}
+
+.fruit-item {
+    padding: 0.2em;
+    width: 100%;
+    list-style: decimal;
+}
+
+.fruit-item:nth-child(odd){
+    background-color: var(--fruit-class-main-bg-color);
+}
+
+.fruit-item:nth-child(even){
+    background-color: var(--fruit-class-sec-bg-color);
+}
+
+.switch {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    
+}
+
+.theme-switch {
+    background-color: var(--main-color);
+    border-radius: 2em;
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 50px;
+}
+
+.theme-switch input {
+   display: none;
+}
+
+.slider {
+    background-color: var(--secondary-color);
+    border-radius: 2em;
+    cursor: pointer;
+    transition: 0.3s all;
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.input:checked + .slider {
+    transform: translateX(20px);
+}
